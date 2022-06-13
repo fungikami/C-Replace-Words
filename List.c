@@ -1,24 +1,14 @@
-/* 
-Lista Doblemente Enlazada
-Autor: Ka Fung (1810492)
-Fecha: 03/06/2020 
-*/
+/**
+ * Lista Doblemente Enlazada
+ * Autor: Ka Fung (1810492)
+ * Fecha: 17/06/2020 
+ */
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "lista.h"
-
-Pair* createPair(char* x, char* y) {
-    Pair* pair = (Pair*)malloc(sizeof(Pair));
-    pair->x = x;
-    pair->y = y;
-    return pair;
-}
-
-void printPair(Pair* pair) {
-    printf("(%s, %s)\n", pair->x, pair->y);
-}
+#include "List.h"
+#include "Pair.h"
 
 /* Insertar un nuevo nodo en frente de la lista */
 void push(struct Node** head, Pair* words) {
@@ -29,7 +19,7 @@ void push(struct Node** head, Pair* words) {
         return;
     }
 
-    /* Asigna datos */
+    /* Asigna datos y actualiza punteros */
     new_node->dato = words;
     new_node->next = *head;
     new_node->prev = NULL;

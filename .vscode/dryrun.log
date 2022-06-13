@@ -1,7 +1,8 @@
 make --dry-run --always-make --keep-going --print-directory
-make: Entering directory '/home/fung/Documents/CI3825 - SISTEMAS DE OPERACION I/CI3825-Tarea'
-gcc -ansi -Wall -pedantic -c main.c
-gcc -ansi -Wall -pedantic -c lista.c
-gcc -ansi -Wall -pedantic -o sustituir main.o lista.o
-make: Leaving directory '/home/fung/Documents/CI3825 - SISTEMAS DE OPERACION I/CI3825-Tarea'
+make: Entering directory '/home/fung/Desktop/CI3825-Tarea'
+gcc -ansi -Wall -pedantic -c Main.c
+gcc -ansi -Wall -pedantic -c List.c
+gcc -ansi -Wall -pedantic -c Pair.c
+gcc -ansi -Wall -pedantic -o sustituir Main.o List.o Pair.o
+make: Leaving directory '/home/fung/Desktop/CI3825-Tarea'
  

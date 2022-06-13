@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "lista.h"
+#include "List.h"
 
 void extract_words(char* archivo, struct Node** head);
 
@@ -44,10 +44,6 @@ int main(int argc, char **argv)
     
     rewind(ifp);
     while (!feof(ifp)) {
-        ch = fgetc(ifp);
-        if (ch == '\n') {
-            printf("\n");
-        }
         fscanf(ifp, "%s", read);
         node = head;
         while (node != NULL) {
@@ -73,6 +69,7 @@ void extract_words(char* archivo, struct Node** head) {
     ptr = fopen(archivo, "r");
     if (ptr == NULL) {
         printf("El archivo no puede ser abierto\n");
+        return;
     }
 
     while(fscanf(ptr, "%[^:]:%s\n", temp1, temp2) != EOF) {
@@ -83,6 +80,7 @@ void extract_words(char* archivo, struct Node** head) {
         sortedInsert(head, createPair(word1, word2));
     }
     printList(*head);
+    fclose(ptr);
 }
 
 void replace_words(struct Node** head) {

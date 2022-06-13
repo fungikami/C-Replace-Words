@@ -3,14 +3,17 @@ CFLAGS = -ansi -Wall -pedantic
 
 all: ejecutable
 
-ejecutable: main.o lista.o
-	$(CC) $(CFLAGS) -o sustituir main.o lista.o
+ejecutable: Main.o List.o Pair.o
+	$(CC) $(CFLAGS) -o sustituir Main.o List.o Pair.o
 
-main.o: main.c
-	$(CC) $(CFLAGS) -c main.c
+Main.o: Main.c
+	$(CC) $(CFLAGS) -c Main.c
 	
-lista.o: lista.c lista.h
-	$(CC) $(CFLAGS) -c lista.c
+List.o: List.c List.h
+	$(CC) $(CFLAGS) -c List.c
+
+Pair.o: Pair.c Pair.h
+	$(CC) $(CFLAGS) -c Pair.c
 
 clean:
 	rm -rf *.o sustituir

@@ -1,11 +1,12 @@
-#ifndef LISTA_H
-    #define LISTA_H
-     
-    /* Estructura de Par(palabra1, palabra2) */
-    typedef struct {
-        char *x;
-        char *y;
-    } Pair;
+/**
+ * Lista Doblemente Enlazada
+ * Autor: Ka Fung (1810492)
+ * Fecha: 17/06/2020 
+ */
+
+#ifndef LIST_H
+    #define LIST_H
+    #include "Pair.h"
 
     /* Estructura de Nodo(par, anterior, siguiente) */
     struct Node {
@@ -14,10 +15,7 @@
         struct Node* next;
     };
     
-    Pair* createPair(char* x, char* y);
-    void printPair(Pair* pair);
     void push(struct Node **head, Pair *words);
     void sortedInsert(struct Node** head, Pair* words);
     void printList(struct Node* node);
-
 #endif

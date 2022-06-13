@@ -1,12 +1,11 @@
-/* 
-Estructura Par
-Autor: Ka Fung (1810492)
-Fecha: 03/06/2020 
-*/
-
+/**
+ * Par de punteros de char
+ * Autor: Ka Fung (1810492)
+ * Fecha: 17/06/2020 
+ */
 #include <stdio.h>
 #include <stdlib.h>
-#include "par.h"
+#include "Pair.h"
 
 Pair* createPair(char* x, char* y) {
     Pair* pair = (Pair*)malloc(sizeof(Pair));

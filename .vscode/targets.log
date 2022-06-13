@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Mon Jun 13 00:26:07 2022
+# Make data base, printed on Mon Jun 13 13:25:25 2022
 
 # Variables
 
@@ -19,7 +19,7 @@ GNOME_SHELL_SESSION_MODE = ubuntu
 # environment
 SSH_AGENT_LAUNCHER = gnome-keyring
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-83731c75-2ca4-45af-b7e0-90eccec3bff9.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-241c8681-4430-408e-b0ca-ca375c2978ef.sock
 # environment
 LC_NAME = es_VE.UTF-8
 # environment
@@ -41,7 +41,7 @@ VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # default
 .VARIABLES := 
 # environment
-PWD = /home/fung/Documents/CI3825 - SISTEMAS DE OPERACION I/CI3825-Tarea
+PWD = /home/fung/Desktop/CI3825-Tarea
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
 # environment
@@ -65,9 +65,9 @@ XAUTHORITY = /run/user/1000/gdm/Xauthority
 # makefile
 MAKEFLAGS = pqrR
 # environment
-DBUS_STARTER_ADDRESS = unix:path=/run/user/1000/bus,guid=359b75faa5893e2e5321e54b62a6ba38
+DBUS_STARTER_ADDRESS = unix:path=/run/user/1000/bus,guid=597c00eb00c9a438116676ca62a723f2
 # makefile
-CURDIR := /home/fung/Documents/CI3825 - SISTEMAS DE OPERACION I/CI3825-Tarea
+CURDIR := /home/fung/Desktop/CI3825-Tarea
 # environment
 VSCODE_PIPE_LOGGING = true
 # environment
@@ -95,19 +95,19 @@ MAKEFILE_LIST := Makefile
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_PID = 5100
+VSCODE_PID = 26991
 # environment
 XDG_SESSION_TYPE = x11
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
 # environment
-SESSION_MANAGER = local/fung:@/tmp/.ICE-unix/1918,unix/fung:/tmp/.ICE-unix/1918
+SESSION_MANAGER = local/fung:@/tmp/.ICE-unix/1915,unix/fung:/tmp/.ICE-unix/1915
 # automatic
 *F = $(notdir $*)
 # environment
 CHROME_DESKTOP = code-url-handler.desktop
 # environment
-DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus,guid=359b75faa5893e2e5321e54b62a6ba38
+DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus,guid=597c00eb00c9a438116676ca62a723f2
 # automatic
 <D = $(patsubst %/,%,$(dir $<))
 # environment
@@ -139,7 +139,7 @@ LC_MONETARY = es_VE.UTF-8
 # environment
 LC_TIME = es_VE.UTF-8
 # environment
-INVOCATION_ID = 272730526e164d5795752f853bf82f54
+INVOCATION_ID = d2ba9f6ea9fc4ea096b6b8b963a110ab
 # environment
 VSCODE_LOG_NATIVE = false
 # environment
@@ -169,7 +169,7 @@ GIO_LAUNCHED_DESKTOP_FILE = /usr/share/applications/code.desktop
 # makefile
 .DEFAULT_GOAL := all
 # environment
-SYSTEMD_EXEC_PID = 1918
+SYSTEMD_EXEC_PID = 1915
 # environment
 DISPLAY = :0
 # environment
@@ -179,13 +179,13 @@ GTK_MODULES = gail:atk-bridge
 # default
 MAKE_VERSION := 4.3
 # environment
-MANAGERPID = 1597
+MANAGERPID = 1590
 # environment
 DBUS_STARTER_BUS_TYPE = session
 # environment
 LC_MEASUREMENT = es_VE.UTF-8
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 5100
+GIO_LAUNCHED_DESKTOP_FILE_PID = 26991
 # environment
 _ = /usr/share/code/code
 # environment
@@ -197,7 +197,7 @@ CFLAGS = -ansi -Wall -pedantic
 # environment
 GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
 # environment
-JOURNAL_STREAM = 8:32570
+JOURNAL_STREAM = 8:36905
 # environment
 XDG_SESSION_CLASS = user
 # environment
@@ -237,9 +237,9 @@ LC_IDENTIFICATION = es_VE.UTF-8
 
 # Directories
 
-# . (device 66310, inode 826928): 19 files, no impossibilities.
+# . (device 66310, inode 826928): 21 files, no impossibilities.
 
-# 19 files, no impossibilities in 1 directories.
+# 21 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -247,7 +247,7 @@ LC_IDENTIFICATION = es_VE.UTF-8
 
 # Files
 
-ejecutable: main.o lista.o
+ejecutable: Main.o List.o Pair.o
 #  Implicit rule search has not been done.
 #  Implicit/static pattern stem: ''
 #  File does not exist.
@@ -258,50 +258,74 @@ ejecutable: main.o lista.o
 # automatic
 # * := 
 # automatic
-# < := main.o
+# < := Main.o
 # automatic
-# + := main.o lista.o
+# + := Main.o List.o Pair.o
 # automatic
 # % := 
 # automatic
-# ^ := main.o lista.o
+# ^ := Main.o List.o Pair.o
 # automatic
-# ? := main.o lista.o
+# ? := Main.o List.o Pair.o
 # automatic
 # | := 
 # variable set hash-table stats:
 # Load=8/32=25%, Rehash=0, Collisions=2/13=15%
 #  recipe to execute (from 'Makefile', line 7):
-	$(CC) $(CFLAGS) -o sustituir main.o lista.o
-
-# Not a target:
-lista.h:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-10 23:14:42.049917687
-#  File has been updated.
-#  Successfully updated.
+	$(CC) $(CFLAGS) -o sustituir Main.o List.o Pair.o
 
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-10 10:38:27.008639161
+#  Last modified 2022-06-13 09:31:17.532021353
+#  File has been updated.
+ 
+#  Successfully updated.
+
+# Not a target:
+List.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-06-13 09:33:24.265117733
 #  File has been updated.
 #  Successfully updated.
 
 clean:
- 
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 16):
+#  recipe to execute (from 'Makefile', line 19):
 	rm -rf *.o sustituir
 
 # Not a target:
-lista.c:
+Pair.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-10 21:27:29.095915353
+#  Last modified 2022-06-13 09:13:20.949489726
 #  File has been updated.
 #  Successfully updated.
+
+List.o: List.c List.h
+#  Implicit rule search has not been done.
+#  Last modified 2022-06-13 10:11:53.714384519
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 13):
+	$(CC) $(CFLAGS) -c List.c
+
+# Not a target:
+Main.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-06-13 10:11:48.04883158
+#  File has been updated.
+#  Successfully updated.
+
+Main.o: Main.c
+#  Implicit rule search has not been done.
+#  Last modified 2022-06-13 10:11:53.690377991
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 10):
+	$(CC) $(CFLAGS) -c Main.c
+	
 
 # Not a target:
 .DEFAULT:
@@ -319,28 +343,26 @@ all: ejecutable
 # Load=0/32=0%, Rehash=0, Collisions=0/5=0%
 
 # Not a target:
-main.c:
+Pair.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-11 00:29:02.485391869
+#  Last modified 2022-06-13 09:15:28.995273282
 #  File has been updated.
 #  Successfully updated.
 
-main.o: main.c
-#  Implicit rule search has not been done.
-#  Last modified 2022-06-11 00:29:05.71334877
+# Not a target:
+List.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-06-13 09:32:04.739000059
 #  File has been updated.
 #  Successfully updated.
-#  recipe to execute (from 'Makefile', line 10):
-	$(CC) $(CFLAGS) -c main.c
-	
 
-lista.o: lista.c lista.h
+Pair.o: Pair.c Pair.h
 #  Implicit rule search has not been done.
-#  Last modified 2022-06-10 23:15:13.24123154
+#  Last modified 2022-06-13 09:31:29.399764871
 #  File has been updated.
 #  Successfully updated.
-#  recipe to execute (from 'Makefile', line 13):
-	$(CC) $(CFLAGS) -c lista.c
+#  recipe to execute (from 'Makefile', line 16):
+	$(CC) $(CFLAGS) -c Pair.c
 
 # Not a target:
 .SUFFIXES:
@@ -349,19 +371,19 @@ lista.o: lista.c lista.h
 #  File has not been updated.
 
 # files hash-table stats:
-# Load=11/1024=1%, Rehash=0, Collisions=0/32=0%
+# Load=14/1024=1%, Rehash=0, Collisions=0/39=0%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 26 / storage = 224 B / avg = 8 B
-# current buf: size = 8162 B / used = 224 B / count = 26 / avg = 8 B
+# strcache buffers: 1 (0) / strings = 28 / storage = 241 B / avg = 8 B
+# current buf: size = 8162 B / used = 241 B / count = 28 / avg = 8 B
 
-# strcache performance: lookups = 45 / hit rate = 42%
+# strcache performance: lookups = 52 / hit rate = 46%
 # hash-table stats:
-# Load=26/8192=0%, Rehash=0, Collisions=0/45=0%
-# Finished Make data base on Mon Jun 13 00:26:07 2022
+# Load=28/8192=0%, Rehash=0, Collisions=0/52=0%
+# Finished Make data base on Mon Jun 13 13:25:25 2022
 
  
