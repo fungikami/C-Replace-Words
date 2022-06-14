@@ -8,11 +8,10 @@ void extract_words(char* file, struct Node** head);
 void replace_words(char* file, struct Node* head);
 
 int main(int argc, char **argv) {
-    /*A TOMAR EN CUENTA
-    SIEMPRE VERIFICAR QUE ABRA/LEA/ASIGNEMEMORIA
-    VER COMO FREE()
+    /* SIEMPRE VERIFICAR QUE ABRA/LEA/ASIGNEMEMORIA
+        VER COMO FREE()
     */
-    struct Node* head;
+    struct Node* list_head;
     int i;
 
     /* Revisar que se recibe los argumentos ARREGLAR */
@@ -22,24 +21,27 @@ int main(int argc, char **argv) {
     }
 
     /* Extraer palabras y almacenarlas en la lista doblemente enlazada */
-    head = NULL;
-    extract_words(argv[1], &head);
-    /* print_list(head); */
+    list_head = NULL;
+    extract_words(argv[1], &list_head);
+    print_list(list_head);
     
     /* Por cada archivo, reemplazar las palabras */
     for (i = 2; i < argc; i++) {
-        replace_words(argv[i], head);
+        replace_words(argv[i], list_head);
     }
 
     /* Liberar memoria */
-    /* free_list(head); */
+    /* free_list(list_head); */
 
     return 0;
 }
 
-/**
- * Reemplaza las palabras en el archivo dado
- *  
+/** 
+ * Reemplaza las palabras de un archivo con las palabras de la 
+ * lista doblemente enlazada 
+ * Parametros:
+ *      - file: archivo a reemplazar
+ *      - head: cabeza de la lista doblemente enlazada
  */
 void replace_words(char* file, struct Node* head) {
     FILE* ptr;
@@ -60,13 +62,16 @@ void replace_words(char* file, struct Node* head) {
     ch = fgetc(ptr);
     current = head;
     i = 0;
-    while (ch != EOF) {    
+    while (ch != EOF) {   
         while (current != NULL) {
             /* Itera mientras coincidan los chars */
+            printf("Antes while amarillo: %c, %c\n", ch, current->data->x[i]); 
             while (ch == current->data->x[i]) {
+
                 ch = fgetc(ptr);
                 i++;
             }
+            printf("Despues while amarillo: %c, %c\n", ch, current->data->x[i]); 
 
             if (i == current->length) {
                 /* Si coincide toda la palabra, se imprime */
@@ -75,8 +80,10 @@ void replace_words(char* file, struct Node* head) {
             } else {
                 /* Si no coincide toda la palabra, se 
                     verifica con la siguiente palabra de la lista*/
-                printf("%d", i);
+                if (i != 0) printf("%d %c\n", i, ch);
+                printf("Antes fseek: %c, %c\n", ch, current->data->x[i]); 
                 fseek(ptr, -i, SEEK_CUR);
+                printf("Despues fseek: %c, %c\n", ch, current->data->x[i]); 
                 current = current->next;
                 i = 0;
             }
@@ -90,15 +97,28 @@ void replace_words(char* file, struct Node* head) {
     }
 }
 
+/** 
+ * Abre el archivo y devuelve el puntero al archivo 
+ * Parámetros:
+ * 		- file: nombre del archivo
+ * Retorno:
+ *      - ptr: puntero al archivo
+ */
 FILE* open_file(char* file) {
-    FILE* ifp = fopen(file, "r");
-    if (!ifp) {
+    FILE* ptr = fopen(file, "r");
+    if (!ptr) {
         printf("Error al abrir el archivo\n");
         exit(1);
     }
-    return ifp;
+    return ptr;
 }
 
+/** 
+ * Extrae las palabras del archivo y las guarda en la lista doblemente enlazada
+ * Parámetros:
+ * 		- file: nombre del archivo
+ *      - head: puntero a la lista
+ */
 void extract_words(char* file, struct Node** head) {
     FILE* ptr;
     char temp1[60], temp2[60];

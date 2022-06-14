@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Mon Jun 13 16:05:11 2022
+# Make data base, printed on Tue Jun 14 09:16:50 2022
 
 # Variables
 
@@ -21,7 +21,7 @@ SSH_AGENT_LAUNCHER = gnome-keyring
 # environment
 GJS_DEBUG_OUTPUT = stderr
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-f39c7185-3e95-459f-ae85-2952f2baaebe.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-905f327f-db34-463d-a94f-7a336a83bd98.sock
 # environment
 LC_NAME = es_VE.UTF-8
 # environment
@@ -95,13 +95,13 @@ MAKEFILE_LIST := Makefile
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_PID = 34238
+VSCODE_PID = 4953
 # environment
 XDG_SESSION_TYPE = x11
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
 # environment
-SESSION_MANAGER = local/fung:@/tmp/.ICE-unix/1915,unix/fung:/tmp/.ICE-unix/1915
+SESSION_MANAGER = local/fung:@/tmp/.ICE-unix/1909,unix/fung:/tmp/.ICE-unix/1909
 # automatic
 *F = $(notdir $*)
 # environment
@@ -141,7 +141,7 @@ LC_MONETARY = es_VE.UTF-8
 # environment
 LC_TIME = es_VE.UTF-8
 # environment
-INVOCATION_ID = 1c6418178a984f52bc20656cc1debe1b
+INVOCATION_ID = b23291f868884431a913fc6df320fb40
 # environment
 VSCODE_LOG_NATIVE = false
 # environment
@@ -171,7 +171,7 @@ GIO_LAUNCHED_DESKTOP_FILE = /usr/share/applications/code.desktop
 # makefile
 .DEFAULT_GOAL := all
 # environment
-SYSTEMD_EXEC_PID = 1934
+SYSTEMD_EXEC_PID = 1928
 # environment
 DISPLAY = :0
 # environment
@@ -181,11 +181,11 @@ GTK_MODULES = gail:atk-bridge
 # default
 MAKE_VERSION := 4.3
 # environment
-MANAGERPID = 1590
+MANAGERPID = 1588
 # environment
 LC_MEASUREMENT = es_VE.UTF-8
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 34238
+GIO_LAUNCHED_DESKTOP_FILE_PID = 4953
 # environment
 _ = /usr/share/code/code
 # environment
@@ -197,7 +197,7 @@ CFLAGS = -ansi -Wall -pedantic
 # environment
 GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
 # environment
-JOURNAL_STREAM = 8:30685
+JOURNAL_STREAM = 8:30498
 # environment
 XDG_SESSION_CLASS = user
 # environment
@@ -279,13 +279,13 @@ Makefile:
 #  Implicit rule search has been done.
 #  Last modified 2022-06-13 09:31:17.532021353
 #  File has been updated.
+ 
 #  Successfully updated.
 
 # Not a target:
 List.c:
 #  Implicit rule search has been done.
- 
-#  Last modified 2022-06-13 09:33:24.265117733
+#  Last modified 2022-06-14 01:40:58.521830993
 #  File has been updated.
 #  Successfully updated.
 
@@ -299,13 +299,13 @@ clean:
 # Not a target:
 Pair.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-13 09:13:20.949489726
+#  Last modified 2022-06-13 21:59:44.606364997
 #  File has been updated.
 #  Successfully updated.
 
 List.o: List.c List.h
 #  Implicit rule search has not been done.
-#  Last modified 2022-06-13 10:11:53.714384519
+#  Last modified 2022-06-14 01:45:56.746384525
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'Makefile', line 13):
@@ -314,13 +314,13 @@ List.o: List.c List.h
 # Not a target:
 Main.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-13 10:11:48.04883158
+#  Last modified 2022-06-14 02:19:26.632854213
 #  File has been updated.
 #  Successfully updated.
 
 Main.o: Main.c
 #  Implicit rule search has not been done.
-#  Last modified 2022-06-13 10:11:53.690377991
+#  Last modified 2022-06-14 02:19:31.628901657
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'Makefile', line 10):
@@ -345,20 +345,20 @@ all: ejecutable
 # Not a target:
 Pair.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-13 09:15:28.995273282
+#  Last modified 2022-06-13 20:55:26.60982222
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 List.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-13 09:32:04.739000059
+#  Last modified 2022-06-13 21:58:46.572438384
 #  File has been updated.
 #  Successfully updated.
 
 Pair.o: Pair.c Pair.h
 #  Implicit rule search has not been done.
-#  Last modified 2022-06-13 09:31:29.399764871
+#  Last modified 2022-06-13 22:23:24.917427437
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'Makefile', line 16):
@@ -384,6 +384,6 @@ Pair.o: Pair.c Pair.h
 # strcache performance: lookups = 52 / hit rate = 46%
 # hash-table stats:
 # Load=28/8192=0%, Rehash=0, Collisions=0/52=0%
-# Finished Make data base on Mon Jun 13 16:05:12 2022
+# Finished Make data base on Tue Jun 14 09:16:50 2022
 
  

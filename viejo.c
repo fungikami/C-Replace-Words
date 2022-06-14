@@ -47,3 +47,29 @@ void extract_words(char* archivo, struct Node** head) {
 
     printList(*head);
 }
+
+
+
+/* Insertar un nuevo nodo en frente de la lista */
+void push_list(struct Node** head, Pair* words) {
+    /* Reserva memoria */
+    int length = strlen(words->x);
+    struct Node* new_node = (struct Node*)malloc(sizeof(struct Node));
+    if (new_node == NULL) {
+        printf("Error al reservar memoria\n");
+        return;
+    }
+
+    /* Asigna datos y actualiza punteros */
+    new_node->data = words;
+    new_node->length = length;
+    new_node->next = *head;
+    new_node->prev = NULL;
+
+    if (*head != NULL) {
+        (*head)->prev = new_node;
+    }
+
+    /* Actualiza head */
+    (*head) = new_node;
+}

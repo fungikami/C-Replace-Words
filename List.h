@@ -8,7 +8,7 @@
     #define __LIST_H__
     #include "Pair.h"
 
-    /* Estructura de Nodo(par, anterior, siguiente) */
+    /* Estructura de Nodo */
     struct Node {
         Pair* data;
         int length;
@@ -16,7 +16,6 @@
         struct Node* next;
     };
     
-    void push(struct Node **head, Pair *words);
     void sorted_insert_list(struct Node** head, Pair* words);
     void print_list(struct Node* node);
 #endif

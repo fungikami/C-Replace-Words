@@ -10,33 +10,15 @@
 #include "List.h"
 #include "Pair.h"
 
-/* Insertar un nuevo nodo en frente de la lista */
-void push_list(struct Node** head, Pair* words) {
-    /* Reserva memoria */
-    int length = strlen(words->x);
-    struct Node* new_node = (struct Node*)malloc(sizeof(struct Node));
-    if (new_node == NULL) {
-        printf("Error al reservar memoria\n");
-        return;
-    }
-
-    /* Asigna datos y actualiza punteros */
-    new_node->data = words;
-    new_node->length = length;
-    new_node->next = *head;
-    new_node->prev = NULL;
-
-    if (*head != NULL) {
-        (*head)->prev = new_node;
-    }
-
-    /* Actualiza head */
-    (*head) = new_node;
-}
-
+/**
+ * Insertar un nuevo nodo, ordenada descendentemente, en la lista.
+ * Se toma como comparación la longitud de la primera palabra del par
+ * Parametros:
+ *      - head: cabeza de la lista
+ *      - words: palabras a insertar
+ */ 
 void sorted_insert_list(struct Node** head, Pair* words) {
     int word_length = strlen(words->x);
-    struct Node* current;
     struct Node* new_node = (struct Node*)malloc(sizeof(struct Node));
     if (new_node == NULL) {
         printf("Error al reservar memoria\n");
@@ -60,7 +42,7 @@ void sorted_insert_list(struct Node** head, Pair* words) {
         *head = new_node;
     } else {
         /* En cambio, se busca en donde insertar */
-        current = *head;
+        struct Node* current = *head;
         while (current->next != NULL && 
                 word_length < current->next->length) {
             current = current->next;
@@ -76,19 +58,14 @@ void sorted_insert_list(struct Node** head, Pair* words) {
     }
 }
 
+/**
+ * Imprime la lista doblemente enlazada
+ * Parámetros:
+ *     - node: puntero a la cabeza de la lista
+ */
 void print_list(struct Node* node) {
-    struct Node* last;
-
-    printf("\nTraversal in forward direction \n");
     while (node != NULL) {
         print_pair(node->data);
-        last = node;
         node = node->next;
-    }
-    
-    printf("\nTraversal in reverse direction \n");
-    while (last != NULL) {
-        print_pair(last->data);
-        last = last->prev;
     }
 }
