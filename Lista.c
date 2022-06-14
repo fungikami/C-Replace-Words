@@ -27,14 +27,14 @@ void insertar_ordenado_lista(struct Nodo** cabeza, Par* palabras) {
 
     /* Crea nuevo nodo */
     nuevo->dato = palabras;
-    nuevo->length = len_palabra;
+    nuevo->len = len_palabra;
 
     if (!(*cabeza)) {
         /* Si la lista esta vacia, simplemente se agrega */
         *cabeza = nuevo;
         nuevo->next = NULL;
         nuevo->prev = NULL;
-    } else if (len_palabra > (*cabeza)->length) {
+    } else if (len_palabra > (*cabeza)->len) {
         /* Si la palabra es mayor que la primera, se agrega al inicio */
         nuevo->next = *cabeza;
         nuevo->prev = NULL;
@@ -43,7 +43,7 @@ void insertar_ordenado_lista(struct Nodo** cabeza, Par* palabras) {
     } else {
         /* En cambio, se busca en donde insertar */
         struct Nodo* actual = *cabeza;
-        while (actual->next != NULL && len_palabra < actual->next->length) {
+        while (actual->next != NULL && len_palabra < actual->next->len) {
             actual = actual->next;
         }
         

@@ -11,7 +11,7 @@
     /* Estructura de Nodo */
     struct Nodo {
         Par* dato;
-        int length;
+        int len;
         struct Nodo* prev;
         struct Nodo* next;
     };

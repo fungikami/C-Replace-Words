@@ -53,7 +53,7 @@ void extract_palabras(char* archivo, struct Nodo** cabeza) {
 /* Insertar un nuevo nodo en frente de la lista */
 void push_list(struct Nodo** cabeza, Par* palabras) {
     /* Reserva memoria */
-    int length = strlen(palabras->x);
+    int len = strlen(palabras->x);
     struct Nodo* nuevo = (struct Nodo*)malloc(sizeof(struct Nodo));
     if (nuevo == NULL) {
         printf("Error al reservar memoria\n");
@@ -62,7 +62,7 @@ void push_list(struct Nodo** cabeza, Par* palabras) {
 
     /* Asigna datos y actualiza punteros */
     nuevo->dato = palabras;
-    nuevo->length = length;
+    nuevo->len = len;
     nuevo->next = *cabeza;
     nuevo->prev = NULL;
 

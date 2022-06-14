@@ -1,3 +1,12 @@
+/**
+ * Tarea 1: Programa que tome una lista de pares de cadenas de 
+ * caracteres <cad1, cad2> de un archivo y reemplace, en un conjunto 
+ * de archivos de texto, todas las ocurrencias de cad1 por cad2.
+ * 
+ * Autor: Ka Fung (1810492)
+ * Fecha: 17/06/2020 
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -112,7 +121,7 @@ void remplazar_palabras(char* archivo, struct Nodo* cabeza) {
             }
 
             /* Si coincide toda la palabra, se imprime */
-            if (i == actual->length) {
+            if (i == actual->len) {
                 printf("%s", actual->dato->y);
                 break;
             }
@@ -129,6 +138,6 @@ void remplazar_palabras(char* archivo, struct Nodo* cabeza) {
             ch = fgetc(ptr);
         } 
     }
-
+    
     fclose(ptr);
 }
