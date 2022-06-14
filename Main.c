@@ -3,86 +3,123 @@
 #include <string.h>
 #include "List.h"
 
-void extract_words(char* archivo, struct Node** head);
+FILE* open_file(char* file);
+void extract_words(char* file, struct Node** head);
+void replace_words(char* file, struct Node* head);
 
-int main(int argc, char **argv)
-{
+int main(int argc, char **argv) {
     /*A TOMAR EN CUENTA
     SIEMPRE VERIFICAR QUE ABRA/LEA/ASIGNEMEMORIA
     VER COMO FREE()
     */
-    struct Node* head, *node;
-    FILE *ifp;
-    char ch, read[100];
-    int word_len, i, p = 0;
+    struct Node* head;
+    int i;
 
     /* Revisar que se recibe los argumentos ARREGLAR */
-    if (argc < 2) {
-        printf("Uso: %s <archivo_entrada> <archivo_salida>\n", argv[0]);
+    if (argc < 3) {
+        printf("Usage: sustituir palabras.txt Archivo1.txt ... \n");
         return 1;
     }
 
-    /* Extraer palabras y almacenarlas en la lista doblemente enlazada*/
+    /* Extraer palabras y almacenarlas en la lista doblemente enlazada */
     head = NULL;
     extract_words(argv[1], &head);
+    /* print_list(head); */
     
-    ifp = fopen("Archivo1.txt", "r");
-
-    if (ifp == NULL) {
-        printf("Error al abrir el archivo\n");
-        return 1;
+    /* Por cada archivo, reemplazar las palabras */
+    for (i = 2; i < argc; i++) {
+        replace_words(argv[i], head);
     }
 
-    while (1) {
-        ch = fgetc(ifp);
-        if (ch == EOF) {
-            break;
-        }
-        printf("%c", ch);
-    }
+    /* Liberar memoria */
+    /* free_list(head); */
 
-    
-    rewind(ifp);
-    while (!feof(ifp)) {
-        fscanf(ifp, "%s", read);
-        node = head;
-        while (node != NULL) {
-            /* printf("%s\n", node->dato->x); */
-            if (strcmp(read, node->dato->x) == 0) {
-                strcpy(read, node->dato->y);
-                break;
-            }
-            node = node->next;
-        }
-        printf("%s", read);
-    }
     return 0;
 }
 
-void extract_words(char* archivo, struct Node** head) {
+/**
+ * Reemplaza las palabras en el archivo dado
+ *  
+ */
+void replace_words(char* file, struct Node* head) {
     FILE* ptr;
-    char temp1[50];
-    char temp2[50];
-    char* word1;
-    char* word2;
+    struct Node* current;
+    int i;
+    char ch;
+    
+    ptr = open_file(file);
 
-    ptr = fopen(archivo, "r");
-    if (ptr == NULL) {
-        printf("El archivo no puede ser abierto\n");
-        return;
+    ch = fgetc(ptr);
+    while (ch != EOF) {
+        printf ("%c", ch);
+        ch = fgetc(ptr);
     }
 
-    while(fscanf(ptr, "%[^:]:%s\n", temp1, temp2) != EOF) {
-        word1 = (char *)malloc(sizeof(char) * strlen(temp1) + 1);
-        word2 = (char *)malloc(sizeof(char) * strlen(temp2) + 1);
-        strcpy(word1, temp1);
-        strcpy(word2, temp2);
-        sortedInsert(head, createPair(word1, word2));
+    rewind(ptr);
+
+    ch = fgetc(ptr);
+    current = head;
+    i = 0;
+    while (ch != EOF) {    
+        while (current != NULL) {
+            /* Itera mientras coincidan los chars */
+            while (ch == current->data->x[i]) {
+                ch = fgetc(ptr);
+                i++;
+            }
+
+            if (i == current->length) {
+                /* Si coincide toda la palabra, se imprime */
+                printf("%s", current->data->y);
+                break;
+            } else {
+                /* Si no coincide toda la palabra, se 
+                    verifica con la siguiente palabra de la lista*/
+                printf("%d", i);
+                fseek(ptr, -i, SEEK_CUR);
+                current = current->next;
+                i = 0;
+            }
+        }
+        i = 0;
+        if (current == NULL) {
+            printf("%c", ch);
+            ch = fgetc(ptr);
+        } 
+        current = head;  
     }
-    printList(*head);
-    fclose(ptr);
 }
 
-void replace_words(struct Node** head) {
-    
+FILE* open_file(char* file) {
+    FILE* ifp = fopen(file, "r");
+    if (!ifp) {
+        printf("Error al abrir el archivo\n");
+        exit(1);
+    }
+    return ifp;
+}
+
+void extract_words(char* file, struct Node** head) {
+    FILE* ptr;
+    char temp1[60], temp2[60];
+
+    /* Abre el archivo */
+    ptr = open_file(file);
+
+    /* Extrae las palabras y las guarda en la lista enlazada */
+    while(fscanf(ptr, "%[^:]:%[^\n]\n", temp1, temp2) != EOF) {
+        char* word1 = (char *)malloc(sizeof(char) * strlen(temp1) + 1);
+        char* word2 = (char *)malloc(sizeof(char) * strlen(temp2) + 1);
+
+        if (!word1 || !word2) {
+            printf("Error al reservar memoria\n");
+            exit(1);
+        }
+
+        strcpy(word1, temp1);
+        strcpy(word2, temp2);
+        sorted_insert_list(head, create_pair(word1, word2));
+    }
+
+    fclose(ptr);
 }

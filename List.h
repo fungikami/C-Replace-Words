@@ -4,18 +4,19 @@
  * Fecha: 17/06/2020 
  */
 
-#ifndef LIST_H
-    #define LIST_H
+#ifndef __LIST_H__
+    #define __LIST_H__
     #include "Pair.h"
 
     /* Estructura de Nodo(par, anterior, siguiente) */
     struct Node {
-        Pair* dato;
+        Pair* data;
+        int length;
         struct Node* prev;
         struct Node* next;
     };
     
     void push(struct Node **head, Pair *words);
-    void sortedInsert(struct Node** head, Pair* words);
-    void printList(struct Node* node);
+    void sorted_insert_list(struct Node** head, Pair* words);
+    void print_list(struct Node* node);
 #endif

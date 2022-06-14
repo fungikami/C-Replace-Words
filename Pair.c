@@ -7,13 +7,13 @@
 #include <stdlib.h>
 #include "Pair.h"
 
-Pair* createPair(char* x, char* y) {
+Pair* create_pair(char* x, char* y) {
     Pair* pair = (Pair*)malloc(sizeof(Pair));
     pair->x = x;
     pair->y = y;
     return pair;
 }
 
-void printPair(Pair* pair) {
+void print_pair(Pair* pair) {
     printf("(%s, %s)\n", pair->x, pair->y);
 }

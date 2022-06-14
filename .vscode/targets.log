@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Mon Jun 13 13:25:25 2022
+# Make data base, printed on Mon Jun 13 16:05:11 2022
 
 # Variables
 
@@ -19,7 +19,9 @@ GNOME_SHELL_SESSION_MODE = ubuntu
 # environment
 SSH_AGENT_LAUNCHER = gnome-keyring
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-241c8681-4430-408e-b0ca-ca375c2978ef.sock
+GJS_DEBUG_OUTPUT = stderr
+# environment
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-f39c7185-3e95-459f-ae85-2952f2baaebe.sock
 # environment
 LC_NAME = es_VE.UTF-8
 # environment
@@ -64,8 +66,6 @@ XAUTHORITY = /run/user/1000/gdm/Xauthority
 .INCLUDE_DIRS = /usr/local/include /usr/include /usr/include
 # makefile
 MAKEFLAGS = pqrR
-# environment
-DBUS_STARTER_ADDRESS = unix:path=/run/user/1000/bus,guid=597c00eb00c9a438116676ca62a723f2
 # makefile
 CURDIR := /home/fung/Desktop/CI3825-Tarea
 # environment
@@ -95,7 +95,7 @@ MAKEFILE_LIST := Makefile
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_PID = 26991
+VSCODE_PID = 34238
 # environment
 XDG_SESSION_TYPE = x11
 # automatic
@@ -107,7 +107,7 @@ SESSION_MANAGER = local/fung:@/tmp/.ICE-unix/1915,unix/fung:/tmp/.ICE-unix/1915
 # environment
 CHROME_DESKTOP = code-url-handler.desktop
 # environment
-DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus,guid=597c00eb00c9a438116676ca62a723f2
+DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus
 # automatic
 <D = $(patsubst %/,%,$(dir $<))
 # environment
@@ -122,6 +122,8 @@ SHELL = /bin/sh
 MAKECMDGOALS := all
 # environment
 XMODIFIERS = @im=ibus
+# environment
+GJS_DEBUG_TOPICS = JS ERROR;JS LOG
 # environment
 SHLVL = 0
 # environment
@@ -139,7 +141,7 @@ LC_MONETARY = es_VE.UTF-8
 # environment
 LC_TIME = es_VE.UTF-8
 # environment
-INVOCATION_ID = d2ba9f6ea9fc4ea096b6b8b963a110ab
+INVOCATION_ID = 1c6418178a984f52bc20656cc1debe1b
 # environment
 VSCODE_LOG_NATIVE = false
 # environment
@@ -169,7 +171,7 @@ GIO_LAUNCHED_DESKTOP_FILE = /usr/share/applications/code.desktop
 # makefile
 .DEFAULT_GOAL := all
 # environment
-SYSTEMD_EXEC_PID = 1915
+SYSTEMD_EXEC_PID = 1934
 # environment
 DISPLAY = :0
 # environment
@@ -181,11 +183,9 @@ MAKE_VERSION := 4.3
 # environment
 MANAGERPID = 1590
 # environment
-DBUS_STARTER_BUS_TYPE = session
-# environment
 LC_MEASUREMENT = es_VE.UTF-8
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 26991
+GIO_LAUNCHED_DESKTOP_FILE_PID = 34238
 # environment
 _ = /usr/share/code/code
 # environment
@@ -197,7 +197,7 @@ CFLAGS = -ansi -Wall -pedantic
 # environment
 GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
 # environment
-JOURNAL_STREAM = 8:36905
+JOURNAL_STREAM = 8:30685
 # environment
 XDG_SESSION_CLASS = user
 # environment
@@ -229,7 +229,7 @@ GDMSESSION = ubuntu-xorg
 # environment
 LC_IDENTIFICATION = es_VE.UTF-8
 # variable set hash-table stats:
-# Load=109/1024=11%, Rehash=0, Collisions=5/144=3%
+# Load=109/1024=11%, Rehash=0, Collisions=4/144=3%
 
 # Pattern-specific Variable Values
 
@@ -279,12 +279,12 @@ Makefile:
 #  Implicit rule search has been done.
 #  Last modified 2022-06-13 09:31:17.532021353
 #  File has been updated.
- 
 #  Successfully updated.
 
 # Not a target:
 List.c:
 #  Implicit rule search has been done.
+ 
 #  Last modified 2022-06-13 09:33:24.265117733
 #  File has been updated.
 #  Successfully updated.
@@ -384,6 +384,6 @@ Pair.o: Pair.c Pair.h
 # strcache performance: lookups = 52 / hit rate = 46%
 # hash-table stats:
 # Load=28/8192=0%, Rehash=0, Collisions=0/52=0%
-# Finished Make data base on Mon Jun 13 13:25:25 2022
+# Finished Make data base on Mon Jun 13 16:05:12 2022
 
  
