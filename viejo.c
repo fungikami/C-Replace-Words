@@ -1,4 +1,4 @@
-void extract_words(char* archivo, struct Node** head) {
+void extract_palabras(char* archivo, struct Nodo** cabeza) {
     FILE* ptr;
     int i = 0;
     char ch;
@@ -29,7 +29,7 @@ void extract_words(char* archivo, struct Node** head) {
             i = 0;
         } else if (ch == ' ' || ch == '\n' || ch == '\t') {
             word[i] = '\0';
-            push(head, createPair(temp, word));
+            push(cabeza, createPair(temp, word));
             word = (char *)malloc(sizeof(char) * 100);
             if (word == NULL) {
                 printf("Error al reservar memoria\n");
@@ -45,31 +45,31 @@ void extract_words(char* archivo, struct Node** head) {
     /*free(word);*/
     fclose(ptr);
 
-    printList(*head);
+    printList(*cabeza);
 }
 
 
 
 /* Insertar un nuevo nodo en frente de la lista */
-void push_list(struct Node** head, Pair* words) {
+void push_list(struct Nodo** cabeza, Par* palabras) {
     /* Reserva memoria */
-    int length = strlen(words->x);
-    struct Node* new_node = (struct Node*)malloc(sizeof(struct Node));
-    if (new_node == NULL) {
+    int length = strlen(palabras->x);
+    struct Nodo* nuevo = (struct Nodo*)malloc(sizeof(struct Nodo));
+    if (nuevo == NULL) {
         printf("Error al reservar memoria\n");
         return;
     }
 
     /* Asigna datos y actualiza punteros */
-    new_node->data = words;
-    new_node->length = length;
-    new_node->next = *head;
-    new_node->prev = NULL;
+    nuevo->dato = palabras;
+    nuevo->length = length;
+    nuevo->next = *cabeza;
+    nuevo->prev = NULL;
 
-    if (*head != NULL) {
-        (*head)->prev = new_node;
+    if (*cabeza != NULL) {
+        (*cabeza)->prev = nuevo;
     }
 
-    /* Actualiza head */
-    (*head) = new_node;
+    /* Actualiza cabeza */
+    (*cabeza) = nuevo;
 }
