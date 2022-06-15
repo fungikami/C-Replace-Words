@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Tue Jun 14 14:41:32 2022
+# Make data base, printed on Wed Jun 15 08:53:07 2022
 
 # Variables
 
@@ -19,9 +19,7 @@ GNOME_SHELL_SESSION_MODE = ubuntu
 # environment
 SSH_AGENT_LAUNCHER = gnome-keyring
 # environment
-GJS_DEBUG_OUTPUT = stderr
-# environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-d0196006-bce7-4216-a4f6-fc1643f8fb78.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-962f6baa-9b4b-4738-9011-1484cab8a92d.sock
 # environment
 LC_NAME = es_VE.UTF-8
 # environment
@@ -66,6 +64,8 @@ XAUTHORITY = /run/user/1000/gdm/Xauthority
 .INCLUDE_DIRS = /usr/local/include /usr/include /usr/include
 # makefile
 MAKEFLAGS = pqrR
+# environment
+DBUS_STARTER_ADDRESS = unix:path=/run/user/1000/bus,guid=bcfecfbf88c37c7b489c9e2e62a9d619
 # makefile
 CURDIR := /home/fung/Desktop/CI3825-Tarea
 # environment
@@ -95,19 +95,19 @@ MAKEFILE_LIST := Makefile
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_PID = 22119
+VSCODE_PID = 4013
 # environment
 XDG_SESSION_TYPE = x11
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
 # environment
-SESSION_MANAGER = local/fung:@/tmp/.ICE-unix/1909,unix/fung:/tmp/.ICE-unix/1909
+SESSION_MANAGER = local/fung:@/tmp/.ICE-unix/1935,unix/fung:/tmp/.ICE-unix/1935
 # automatic
 *F = $(notdir $*)
 # environment
 CHROME_DESKTOP = code-url-handler.desktop
 # environment
-DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus
+DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus,guid=bcfecfbf88c37c7b489c9e2e62a9d619
 # automatic
 <D = $(patsubst %/,%,$(dir $<))
 # environment
@@ -122,8 +122,6 @@ SHELL = /bin/sh
 MAKECMDGOALS := all
 # environment
 XMODIFIERS = @im=ibus
-# environment
-GJS_DEBUG_TOPICS = JS ERROR;JS LOG
 # environment
 SHLVL = 0
 # environment
@@ -141,7 +139,7 @@ LC_MONETARY = es_VE.UTF-8
 # environment
 LC_TIME = es_VE.UTF-8
 # environment
-INVOCATION_ID = b23291f868884431a913fc6df320fb40
+INVOCATION_ID = a65c54fb2bb44136b319bed206992e6f
 # environment
 VSCODE_LOG_NATIVE = false
 # environment
@@ -171,7 +169,7 @@ GIO_LAUNCHED_DESKTOP_FILE = /usr/share/applications/code.desktop
 # makefile
 .DEFAULT_GOAL := all
 # environment
-SYSTEMD_EXEC_PID = 1928
+SYSTEMD_EXEC_PID = 1935
 # environment
 DISPLAY = :0
 # environment
@@ -181,11 +179,13 @@ GTK_MODULES = gail:atk-bridge
 # default
 MAKE_VERSION := 4.3
 # environment
-MANAGERPID = 1588
+MANAGERPID = 1610
+# environment
+DBUS_STARTER_BUS_TYPE = session
 # environment
 LC_MEASUREMENT = es_VE.UTF-8
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 22119
+GIO_LAUNCHED_DESKTOP_FILE_PID = 4013
 # environment
 _ = /usr/share/code/code
 # environment
@@ -197,7 +197,7 @@ CFLAGS = -ansi -Wall -pedantic
 # environment
 GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
 # environment
-JOURNAL_STREAM = 8:30498
+JOURNAL_STREAM = 8:36891
 # environment
 XDG_SESSION_CLASS = user
 # environment
@@ -229,7 +229,7 @@ GDMSESSION = ubuntu-xorg
 # environment
 LC_IDENTIFICATION = es_VE.UTF-8
 # variable set hash-table stats:
-# Load=109/1024=11%, Rehash=0, Collisions=4/144=3%
+# Load=109/1024=11%, Rehash=0, Collisions=5/144=3%
 
 # Pattern-specific Variable Values
 
@@ -249,38 +249,19 @@ LC_IDENTIFICATION = es_VE.UTF-8
 
 # Not a target:
 Lista.c:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-14 14:40:36.450512652
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 ejecutable: Main.o Lista.o Par.o
 #  Implicit rule search has not been done.
-#  Implicit/static pattern stem: ''
 #  File does not exist.
 #  File has been updated.
 #  Needs to be updated (-q is set).
-# automatic
-# @ := ejecutable
-# automatic
-# * := 
-# automatic
-# < := Main.o
-# automatic
-# + := Main.o Lista.o Par.o
-# automatic
-# % := 
-# automatic
-# ^ := Main.o Lista.o Par.o
-# automatic
-# ? := Main.o Lista.o Par.o
-# automatic
-# | := 
 # variable set hash-table stats:
-# Load=8/32=25%, Rehash=0, Collisions=2/13=15%
+# Load=0/32=0%, Rehash=0, Collisions=0/5=0%
 #  recipe to execute (from 'Makefile', line 7):
 	$(CC) $(CFLAGS) -o sustituir Main.o Lista.o Par.o
- 
 
 # Not a target:
 Makefile:
@@ -291,17 +272,15 @@ Makefile:
 
 Lista.o: Lista.c Lista.h
 #  Implicit rule search has not been done.
-#  Last modified 2022-06-14 14:40:42.002518462
-#  File has been updated.
-#  Successfully updated.
+#  Modification time never checked.
+#  File has not been updated.
 #  recipe to execute (from 'Makefile', line 13):
 	$(CC) $(CFLAGS) -c Lista.c
 
 Par.o: Par.c Par.h
 #  Implicit rule search has not been done.
-#  Last modified 2022-06-14 14:40:42.018518479
-#  File has been updated.
-#  Successfully updated.
+#  Modification time never checked.
+#  File has not been updated.
 #  recipe to execute (from 'Makefile', line 16):
 	$(CC) $(CFLAGS) -c Par.c
 
@@ -314,30 +293,48 @@ clean:
 
 # Not a target:
 Lista.h:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-14 14:37:09.46636278
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 Par.h:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-14 14:40:08.034487038
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 Main.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-14 14:38:45.778454915
+ 
+#  Last modified 2022-06-14 16:42:09.304736824
 #  File has been updated.
 #  Successfully updated.
 
 Main.o: Main.c
 #  Implicit rule search has not been done.
-#  Last modified 2022-06-14 14:39:38.038467809
+#  Implicit/static pattern stem: ''
+#  Last modified 2022-06-14 14:46:21.431270983
 #  File has been updated.
-#  Successfully updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := Main.o
+# automatic
+# * := 
+# automatic
+# < := Main.c
+# automatic
+# + := Main.c
+# automatic
+# % := 
+# automatic
+# ^ := Main.c
+# automatic
+# ? := Main.c
+# automatic
+# | := 
+# variable set hash-table stats:
+# Load=8/32=25%, Rehash=0, Collisions=2/13=15%
 #  recipe to execute (from 'Makefile', line 10):
 	$(CC) $(CFLAGS) -c Main.c
 	
@@ -359,10 +356,9 @@ all: ejecutable
 
 # Not a target:
 Par.c:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-14 14:34:54.853356335
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 .SUFFIXES:
@@ -378,12 +374,12 @@ Par.c:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 32 / storage = 282 B / avg = 8 B
-# current buf: size = 8162 B / used = 282 B / count = 32 / avg = 8 B
+# strcache buffers: 1 (0) / strings = 32 / storage = 295 B / avg = 9 B
+# current buf: size = 8162 B / used = 295 B / count = 32 / avg = 9 B
 
 # strcache performance: lookups = 56 / hit rate = 42%
 # hash-table stats:
 # Load=32/8192=0%, Rehash=0, Collisions=0/56=0%
-# Finished Make data base on Tue Jun 14 14:41:32 2022
+# Finished Make data base on Wed Jun 15 08:53:08 2022
 
  

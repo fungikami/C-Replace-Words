@@ -22,7 +22,7 @@ int main(int argc, char **argv) {
 
     /* Revisar que recibe correctamente los argumentos */
     if (argc < 3) {
-        printf("Usage: sustituir palabras.txt Archivo1.txt ... \n");
+        printf("Uso: sustituir <palabras.txt> <Archivo1.txt> <Archivo2.txt>... \n");
         return 1;
     }
 
@@ -40,7 +40,7 @@ int main(int argc, char **argv) {
         }
     }
 
-    /* Liberar memoria */
+    /* Liberar memoria ocupada por la lista */
     liberar_lista(lista_cabeza);
 
     return 0;
@@ -138,6 +138,6 @@ void remplazar_palabras(char* archivo, struct Nodo* cabeza) {
             ch = fgetc(ptr);
         } 
     }
-    
+
     fclose(ptr);
 }
