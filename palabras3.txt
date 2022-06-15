@@ -1,3 +1,0 @@
-carro:casa
-ropa:taza
-Te : café

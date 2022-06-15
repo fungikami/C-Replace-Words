@@ -1,3 +1,8 @@
 Retro:viejo
 ceso:dejo
 El carro rojo:El auto azul
+carro:casa
+ropa:taza
+Te : café
+xx:geeks
+is:izzzz

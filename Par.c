@@ -17,6 +17,11 @@
  */
 Par* crear_par(char* x, char* y) {
     Par* par = (Par*)malloc(sizeof(Par));
+    if(!par) {
+        printf("Error al reservar memoria\n");
+        exit(1);
+    }
+    
     par->x = x;
     par->y = y;
     return par;
