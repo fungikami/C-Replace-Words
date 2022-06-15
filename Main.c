@@ -34,7 +34,7 @@ int main(int argc, char **argv) {
     for (i = 2; i < argc; i++) {
         remplazar_palabras(argv[i], lista_cabeza);
         if (i != argc - 1) {
-            printf("--\n");
+            printf("\n--\n");
         } else {
             printf("\n");
         }
