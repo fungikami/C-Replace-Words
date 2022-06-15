@@ -6,3 +6,4 @@ ropa:taza
 Te : café
 xx:geeks
 is:izzzz
+love :hate 

@@ -4,7 +4,7 @@
  * de archivos de texto, todas las ocurrencias de cad1 por cad2.
  * 
  * Autor: Ka Fung (1810492)
- * Fecha: 17/06/2020 
+ * Fecha: 16/06/2020 
  */
 
 #include <stdio.h>

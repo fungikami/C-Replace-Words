@@ -1,7 +1,7 @@
 /**
- * Par de punteros de char
+ * Par de palabras
  * Autor: Ka Fung (1810492)
- * Fecha: 17/06/2020 
+ * Fecha: 16/06/2020 
  */
 
 #ifndef __PAR_H__

@@ -1,7 +1,7 @@
 /**
- * Lista Doblemente Enlazada
+ * Lista Doblemente Enlazada de Pares de palabras
  * Autor: Ka Fung (1810492)
- * Fecha: 17/06/2020 
+ * Fecha: 16/06/2020 
  */
 
 #ifndef __LISTA_H__

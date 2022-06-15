@@ -1,7 +1,7 @@
 /**
- * Lista Doblemente Enlazada
+ * Lista Doblemente Enlazada de Pares de palabras
  * Autor: Ka Fung (1810492)
- * Fecha: 17/06/2020 
+ * Fecha: 16/06/2020 
  */
 
 #include <stdio.h>
@@ -11,8 +11,8 @@
 #include "Par.h"
 
 /**
- * Insertar un nuevo nodo, ordenada descendentemente, en la lista.
- * Se toma como comparación la longitud de la primera palabra del par
+ * Inserta un nuevo nodo en una lista ordenada descendentemente.
+ * Se toma como comparación la longitud de la primera palabra del par.
  * Parametros:
  *      - cabeza: cabeza de la lista
  *      - palabras: palabras a insertar
