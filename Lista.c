@@ -52,7 +52,7 @@ void insertar_ordenado_lista(struct Nodo** cabeza, Par* palabras) {
         
         /* Actualiza los punteros */
         nuevo->next = actual->next;
-        if (actual->next != NULL) {
+        if (actual->next) {
             actual->next->prev = nuevo;
         }
         actual->next = nuevo;
@@ -67,7 +67,7 @@ void insertar_ordenado_lista(struct Nodo** cabeza, Par* palabras) {
  */
 void print_lista(struct Nodo* nodo) {
     printf("[");
-    while (nodo != NULL) {
+    while (nodo) {
         print_par(nodo->dato);
         if (nodo->next) {
             printf(", ");
@@ -83,7 +83,7 @@ void print_lista(struct Nodo* nodo) {
  *    - nodo: puntero a la cabeza de la lista
  */ 
 void liberar_lista(struct Nodo* nodo) {
-    while (nodo != NULL) {
+    while (nodo) {
         struct Nodo* temp = nodo;
         nodo = nodo->next;
         liberar_par(temp->dato);

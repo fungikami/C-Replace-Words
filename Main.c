@@ -76,7 +76,6 @@ void extraer_palabras(char* archivo, struct Nodo** cabeza) {
     FILE* ptr;
     char temp1[60], temp2[60];
 
-    /* Abre el archivo */
     ptr = abrir_archivo(archivo);
 
     /* Extrae las palabras y las separa según el char ':' */
@@ -108,7 +107,6 @@ void remplazar_palabras(char* archivo, struct Nodo* cabeza) {
     FILE* ptr;
     char ch;
     
-    /* Abre el archivo */
     ptr = abrir_archivo(archivo);
 
     /* Revisamos por cada coincidencia de char del archivo a reemplazar */
@@ -117,10 +115,10 @@ void remplazar_palabras(char* archivo, struct Nodo* cabeza) {
 
         /* Revisamos por cada palabra de la lista */
         struct Nodo* actual = cabeza;
-        while (actual != NULL) {
-
+        while (actual) {
             /* Itera mientras coincidan la palabra de la lista y el texto*/
             int i = 0;
+            
             while (ch == actual->dato->x[i]) {
                 ch = fgetc(ptr);
                 i++;
@@ -139,7 +137,7 @@ void remplazar_palabras(char* archivo, struct Nodo* cabeza) {
         }
 
         /* Si no coincide ninguna palabra de la lista, se imprime el char */
-        if (actual == NULL) {
+        if (!actual) {
             printf("%c", ch);
             ch = fgetc(ptr);
         } 

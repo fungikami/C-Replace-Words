@@ -1,4 +1,4 @@
-make --dry-run --keep-going --print-directory
+make --dry-run --always-make --keep-going --print-directory
 make: Entering directory '/home/fung/Desktop/CI3825-Tarea'
 gcc -ansi -Wall -pedantic -c Main.c
 gcc -ansi -Wall -pedantic -c Lista.c
