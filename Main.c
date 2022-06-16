@@ -115,7 +115,7 @@ void remplazar_palabras(char* archivo, struct Nodo* cabeza) {
 
         /* Revisamos por cada palabra de la lista */
         struct Nodo* actual = cabeza;
-        while (actual) {
+        while (actual != NULL) {
             /* Itera mientras coincidan la palabra de la lista y el texto*/
             int i = 0;
             
