@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Thu Jun 16 12:18:14 2022
+# Make data base, printed on Thu Jun 16 18:48:40 2022
 
 # Variables
 
@@ -21,7 +21,7 @@ SSH_AGENT_LAUNCHER = gnome-keyring
 # environment
 GJS_DEBUG_OUTPUT = stderr
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-c5d34ad0-1dcc-4688-a524-fd1fcf4dc26f.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-26f0aa57-db45-4c41-a0ba-652f2c580579.sock
 # environment
 LC_NAME = es_VE.UTF-8
 # environment
@@ -95,7 +95,7 @@ MAKEFILE_LIST := Makefile
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_PID = 26913
+VSCODE_PID = 58471
 # environment
 XDG_SESSION_TYPE = x11
 # automatic
@@ -185,7 +185,7 @@ MANAGERPID = 1585
 # environment
 LC_MEASUREMENT = es_VE.UTF-8
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 26913
+GIO_LAUNCHED_DESKTOP_FILE_PID = 58471
 # environment
 _ = /usr/share/code/code
 # environment
@@ -237,9 +237,9 @@ LC_IDENTIFICATION = es_VE.UTF-8
 
 # Directories
 
-# . (device 66310, inode 826928): 22 files, no impossibilities.
+# . (device 66310, inode 826928): 21 files, no impossibilities.
 
-# 22 files, no impossibilities in 1 directories.
+# 21 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -250,7 +250,7 @@ LC_IDENTIFICATION = es_VE.UTF-8
 # Not a target:
 Lista.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-16 12:02:01.04229047
+#  Last modified 2022-06-16 12:37:09.434942049
 #  File has been updated.
 #  Successfully updated.
 
@@ -279,18 +279,19 @@ ejecutable: Main.o Lista.o Par.o
 # variable set hash-table stats:
 # Load=8/32=25%, Rehash=0, Collisions=2/13=15%
 #  recipe to execute (from 'Makefile', line 7):
+ 
 	$(CC) $(CFLAGS) -o sustituir Main.o Lista.o Par.o
 
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-16 11:39:37.931172844
+#  Last modified 2022-06-16 18:46:51.964251956
 #  File has been updated.
 #  Successfully updated.
 
 Lista.o: Lista.c Lista.h
 #  Implicit rule search has not been done.
-#  Last modified 2022-06-16 12:17:47.294060235
+#  Last modified 2022-06-16 18:47:34.413286479
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'Makefile', line 13):
@@ -298,7 +299,7 @@ Lista.o: Lista.c Lista.h
 
 Par.o: Par.c Par.h
 #  Implicit rule search has not been done.
-#  Last modified 2022-06-16 12:17:47.314059703
+#  Last modified 2022-06-16 18:47:34.429285507
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'Makefile', line 16):
@@ -323,19 +324,18 @@ Par.h:
 #  Implicit rule search has been done.
 #  Last modified 2022-06-16 09:03:41.289424385
 #  File has been updated.
- 
 #  Successfully updated.
 
 # Not a target:
 Main.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-16 12:16:20.236428551
+#  Last modified 2022-06-16 18:48:16.611066712
 #  File has been updated.
 #  Successfully updated.
 
 Main.o: Main.c
 #  Implicit rule search has not been done.
-#  Last modified 2022-06-16 12:17:47.274060769
+#  Last modified 2022-06-16 18:48:19.138954248
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'Makefile', line 10):
@@ -378,12 +378,12 @@ Par.c:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 29 / storage = 253 B / avg = 8 B
-# current buf: size = 8162 B / used = 253 B / count = 29 / avg = 8 B
+# strcache buffers: 1 (0) / strings = 28 / storage = 249 B / avg = 8 B
+# current buf: size = 8162 B / used = 249 B / count = 28 / avg = 8 B
 
-# strcache performance: lookups = 53 / hit rate = 45%
+# strcache performance: lookups = 52 / hit rate = 46%
 # hash-table stats:
-# Load=29/8192=0%, Rehash=0, Collisions=0/53=0%
-# Finished Make data base on Thu Jun 16 12:18:14 2022
+# Load=28/8192=0%, Rehash=0, Collisions=0/52=0%
+# Finished Make data base on Thu Jun 16 18:48:40 2022
 
  

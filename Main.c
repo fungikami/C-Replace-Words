@@ -38,9 +38,7 @@ int main(int argc, char **argv) {
         
         if (i != argc - 1) {
             printf("\n--\n");
-        } else {
-            printf("\n");
-        }
+        } 
     }
 
     /* Liberar memoria ocupada por la lista */
