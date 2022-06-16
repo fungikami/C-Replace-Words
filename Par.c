@@ -1,6 +1,8 @@
 /**
  * Par.c
+ * 
  * Par de palabras
+ * 
  * Autor: Ka Fung (1810492)
  * Fecha: 16/06/2020 
  */
@@ -35,7 +37,7 @@ Par* crear_par(char* x, char* y) {
  *    - par: par de palabras
  */ 
 void print_par(Par* par) {
-    printf("(%s, %s)\n", par->x, par->y);
+    printf("(%s, %s)", par->x, par->y);
 }
 
 /**

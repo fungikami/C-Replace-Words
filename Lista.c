@@ -1,6 +1,8 @@
 /**
  * Lista.c
+ * 
  * Lista Doblemente Enlazada de Pares de palabras
+ * 
  * Autor: Ka Fung (1810492)
  * Fecha: 16/06/2020 
  */
@@ -22,7 +24,7 @@ void insertar_ordenado_lista(struct Nodo** cabeza, Par* palabras) {
     int len_palabra = strlen(palabras->x);
     struct Nodo* nuevo = (struct Nodo*)malloc(sizeof(struct Nodo));
     if (!nuevo) {
-        printf("Error al reservar memoria\n");
+        printf("Error al reservar memoria al insertar una nueva palabra.\n");
         exit(1);
     }
 
@@ -63,11 +65,16 @@ void insertar_ordenado_lista(struct Nodo** cabeza, Par* palabras) {
  * Parámetros:
  *     - nodo: puntero a la cabeza de la lista
  */
-void print_list(struct Nodo* nodo) {
+void print_lista(struct Nodo* nodo) {
+    printf("[");
     while (nodo != NULL) {
         print_par(nodo->dato);
+        if (nodo->next) {
+            printf(", ");
+        }
         nodo = nodo->next;
     }
+    printf("]\n");
 }
 
 /**

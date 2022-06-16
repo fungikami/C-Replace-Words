@@ -8,7 +8,12 @@
 #ifndef __PAR_H__
     #define __PAR_H__
      
-    /* Estructura de Par(palabra1, palabra2) */
+    /**
+     * Par de palabras
+     * Atributos:
+     *     - x: palabra a remplazar
+     *     - y: palabra por remplazar
+     */
     typedef struct {
         char *x;
         char *y;

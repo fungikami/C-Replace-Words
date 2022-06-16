@@ -1,8 +1,10 @@
 /**
  * Main.c
- * Programa que tome una lista de pares de cadenas de caracteres 
- * <cad1, cad2> de un archivo y reemplace, en un conjunto de 
+ * 
+ * Programa que toma una lista de pares de cadenas de caracteres 
+ * <cad1, cad2> de un archivo y reemplaza, en un conjunto de 
  * archivos de texto, todas las ocurrencias de cad1 por cad2.
+ * 
  * Autor: Ka Fung (1810492)
  * Fecha: 16/06/2020 
  */
@@ -57,7 +59,7 @@ int main(int argc, char **argv) {
 FILE* abrir_archivo(char* archivo) {
     FILE* ptr = fopen(archivo, "r");
     if (!ptr) {
-        printf("Error al abrir el archivo\n");
+        printf("Error al abrir el archivo %s\n", archivo);
         exit(1);
     }
     return ptr;
@@ -82,7 +84,7 @@ void extraer_palabras(char* archivo, struct Nodo** cabeza) {
         char* word1 = (char *)malloc(sizeof(char) * strlen(temp1) + 1);
         char* word2 = (char *)malloc(sizeof(char) * strlen(temp2) + 1);
         if (!word1 || !word2) {
-            printf("Error al reservar memoria\n");
+            printf("Error al reservar memoria para guardar las palabras\n");
             exit(1);
         }
 
@@ -114,7 +116,7 @@ void remplazar_palabras(char* archivo, struct Nodo* cabeza) {
     while (ch != EOF) {   
 
         /* Revisamos por cada palabra de la lista */
-        struct Nodo*  actual = cabeza;
+        struct Nodo* actual = cabeza;
         while (actual != NULL) {
 
             /* Itera mientras coincidan la palabra de la lista y el texto*/

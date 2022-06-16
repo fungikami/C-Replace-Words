@@ -9,7 +9,14 @@
     #define __LISTA_H__
     #include "Par.h"
 
-    /* Estructura de Nodo */
+    /**
+     * Nodo de la lista
+     * Atributos:
+     *      - par: par de palabras
+     *      - len: longitud de la primera palabra del par
+     *      - prev: anterior nodo
+     *      - next: siguiente nodo
+     */
     struct Nodo {
         Par* dato;
         int len;
@@ -18,6 +25,6 @@
     };
     
     void insertar_ordenado_lista(struct Nodo** cabeza, Par* palabras);
-    void print_list(struct Nodo* nodo);
+    void print_lista(struct Nodo* nodo);
     void liberar_lista(struct Nodo* nodo);
 #endif

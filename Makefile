@@ -16,4 +16,4 @@ Par.o: Par.c Par.h
 	$(CC) $(CFLAGS) -c Par.c
 
 clean:
-	rm -rf *.o sustituir
+	rm *.o sustituir
