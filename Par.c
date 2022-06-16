@@ -1,14 +1,16 @@
 /**
+ * Par.c
  * Par de palabras
  * Autor: Ka Fung (1810492)
  * Fecha: 16/06/2020 
  */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include "Par.h"
 
 /**
- * Crea un nuevo par de palabras
+ * Crea un nuevo par de palabras.
  * Parametros:
  *     - x: palabra1
  *     - y: palabra2
@@ -28,7 +30,7 @@ Par* crear_par(char* x, char* y) {
 }
 
 /**
- * Imprime un par de palabras
+ * Imprime un par de palabras.
  * Parametros:
  *    - par: par de palabras
  */ 
@@ -37,7 +39,7 @@ void print_par(Par* par) {
 }
 
 /**
- * Libera la memoria asignada de un par de palabras
+ * Libera la memoria asignada de un par de palabras.
  * Parametros:
  *   - par: par de palabras
  */

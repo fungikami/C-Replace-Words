@@ -8,3 +8,6 @@ xx:geeks
 is:izzzz
 love :hate 
 Codeforwin.:coñazos.
+papa:pepe
+pipi:popo
+papapipi:pupu

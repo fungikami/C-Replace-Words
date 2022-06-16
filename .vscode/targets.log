@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Wed Jun 15 08:53:07 2022
+# Make data base, printed on Thu Jun 16 00:27:13 2022
 
 # Variables
 
@@ -19,7 +19,7 @@ GNOME_SHELL_SESSION_MODE = ubuntu
 # environment
 SSH_AGENT_LAUNCHER = gnome-keyring
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-962f6baa-9b4b-4738-9011-1484cab8a92d.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-087dc65e-ca20-485f-b3fc-cc491b7c2153.sock
 # environment
 LC_NAME = es_VE.UTF-8
 # environment
@@ -53,7 +53,7 @@ VSCODE_LOG_STACK = false
 # automatic
 %F = $(notdir $%)
 # environment
-VSCODE_CODE_CACHE_PATH = /home/fung/.config/Code/CachedData/4af164ea3a06f701fe3e89a2bcbb421d2026b68f
+VSCODE_CODE_CACHE_PATH = /home/fung/.config/Code/CachedData/30d9c6cd9483b2cc586687151bcbcd635f373630
 # environment
 LANG = C
 # environment
@@ -95,7 +95,7 @@ MAKEFILE_LIST := Makefile
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_PID = 4013
+VSCODE_PID = 85053
 # environment
 XDG_SESSION_TYPE = x11
 # automatic
@@ -185,7 +185,7 @@ DBUS_STARTER_BUS_TYPE = session
 # environment
 LC_MEASUREMENT = es_VE.UTF-8
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 4013
+GIO_LAUNCHED_DESKTOP_FILE_PID = 85053
 # environment
 _ = /usr/share/code/code
 # environment
@@ -209,7 +209,7 @@ QT_IM_MODULE = ibus
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-VSCODE_IPC_HOOK = /run/user/1000/vscode-dbe985b3-1.68.0-main.sock
+VSCODE_IPC_HOOK = /run/user/1000/vscode-dbe985b3-1.68.1-main.sock
 # environment
 IM_CONFIG_PHASE = 1
 # default
@@ -237,9 +237,9 @@ LC_IDENTIFICATION = es_VE.UTF-8
 
 # Directories
 
-# . (device 66310, inode 826928): 25 files, no impossibilities.
+# . (device 66310, inode 826928): 18 files, no impossibilities.
 
-# 25 files, no impossibilities in 1 directories.
+# 18 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -292,6 +292,7 @@ clean:
 	rm -rf *.o sustituir
 
 # Not a target:
+ 
 Lista.h:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
@@ -306,15 +307,14 @@ Par.h:
 # Not a target:
 Main.c:
 #  Implicit rule search has been done.
- 
-#  Last modified 2022-06-14 16:42:09.304736824
+#  Last modified 2022-06-16 00:22:37.73618296
 #  File has been updated.
 #  Successfully updated.
 
 Main.o: Main.c
 #  Implicit rule search has not been done.
 #  Implicit/static pattern stem: ''
-#  Last modified 2022-06-14 14:46:21.431270983
+#  File does not exist.
 #  File has been updated.
 #  Needs to be updated (-q is set).
 # automatic
@@ -374,12 +374,12 @@ Par.c:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 32 / storage = 295 B / avg = 9 B
-# current buf: size = 8162 B / used = 295 B / count = 32 / avg = 9 B
+# strcache buffers: 1 (0) / strings = 28 / storage = 250 B / avg = 8 B
+# current buf: size = 8162 B / used = 250 B / count = 28 / avg = 8 B
 
-# strcache performance: lookups = 56 / hit rate = 42%
+# strcache performance: lookups = 49 / hit rate = 42%
 # hash-table stats:
-# Load=32/8192=0%, Rehash=0, Collisions=0/56=0%
-# Finished Make data base on Wed Jun 15 08:53:08 2022
+# Load=28/8192=0%, Rehash=0, Collisions=0/49=0%
+# Finished Make data base on Thu Jun 16 00:27:13 2022
 
  

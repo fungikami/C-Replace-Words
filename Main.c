@@ -1,8 +1,8 @@
 /**
- * Tarea 1: Programa que tome una lista de pares de cadenas de 
- * caracteres <cad1, cad2> de un archivo y reemplace, en un conjunto 
- * de archivos de texto, todas las ocurrencias de cad1 por cad2.
- * 
+ * Main.c
+ * Programa que tome una lista de pares de cadenas de caracteres 
+ * <cad1, cad2> de un archivo y reemplace, en un conjunto de 
+ * archivos de texto, todas las ocurrencias de cad1 por cad2.
  * Autor: Ka Fung (1810492)
  * Fecha: 16/06/2020 
  */
@@ -33,6 +33,7 @@ int main(int argc, char **argv) {
     /* Por cada archivo, reemplazar las palabras */
     for (i = 2; i < argc; i++) {
         remplazar_palabras(argv[i], lista_cabeza);
+        
         if (i != argc - 1) {
             printf("\n--\n");
         } else {
@@ -47,7 +48,7 @@ int main(int argc, char **argv) {
 }
 
 /** 
- * Abre el archivo y verifica si se pudo abrir
+ * Abre un archivo dado y verifica si se pudo abrir.
  * Parámetros:
  * 		- archivo: nombre del archivo
  * Retorno:
@@ -63,7 +64,8 @@ FILE* abrir_archivo(char* archivo) {
 }
 
 /** 
- * Extrae las palabras del archivo y las guarda en la lista doblemente enlazada
+ * Dado un archivo con una lista de palabras a sustituir, extrae 
+ * las palabras y las guarda en una lista doblemente enlazada dada.
  * Parámetros:
  * 		- archivo: nombre del archivo
  *      - cabeza: puntero a la lista
@@ -94,8 +96,8 @@ void extraer_palabras(char* archivo, struct Nodo** cabeza) {
 }
 
 /** 
- * Reemplaza las palabras de un archivo con las palabras de la 
- * lista doblemente enlazada 
+ * Dado un archivo de texto y una lista de palabras a reemplazar,
+ * reemplaza todas las ocurrencias de las palabras en el archivo.
  * Parametros:
  *      - archivo: archivo a reemplazar
  *      - cabeza: cabeza de la lista doblemente enlazada
@@ -110,9 +112,11 @@ void remplazar_palabras(char* archivo, struct Nodo* cabeza) {
     /* Revisamos por cada coincidencia de char del archivo a reemplazar */
     ch = fgetc(ptr);
     while (ch != EOF) {   
+
         /* Revisamos por cada palabra de la lista */
         struct Nodo*  actual = cabeza;
         while (actual != NULL) {
+
             /* Itera mientras coincidan la palabra de la lista y el texto*/
             int i = 0;
             while (ch == actual->dato->x[i]) {
