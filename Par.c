@@ -1,8 +1,6 @@
 /**
  * Par.c
- * 
  * Par de palabras
- * 
  * Autor: Ka Fung (1810492)
  * Fecha: 16/06/2020 
  */
